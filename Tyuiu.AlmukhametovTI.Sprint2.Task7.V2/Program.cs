@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.AlmukhametovTI.Sprint2.Task6.V10.Lib;
+using Tyuiu.AlmukhametovTI.Sprint2.Task7.V2.Lib;
 
-namespace Tyuiu.AlmukhametovTI.Sprint2.Task6.V10
+namespace Tyuiu.AlmukhametovTI.Sprint2.Task7.V2
 {
     internal class Program
     {
@@ -13,32 +13,40 @@ namespace Tyuiu.AlmukhametovTI.Sprint2.Task6.V10
         {
             DataService ds = new DataService();
 
+
             Console.Title = "Спринт #2| Выполнил: Альмухаметов Т.И. | ИИПб-23-3";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #2                                                               *");
-            Console.WriteLine("* Тема: сокращенный switch                                                *");
-            Console.WriteLine("* Задание #6                                                              *");
-            Console.WriteLine("* Вариант #7                                                              *");
+            Console.WriteLine("* Тема:                                                                   *");
+            Console.WriteLine("* Задание #7                                                              *");
+            Console.WriteLine("* Вариант #2                                                              *");
             Console.WriteLine("* Выполнил Альмухаметов Тимур Ильясович | ИИПб-23-3                       *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
             Console.WriteLine("Введите значение переменной X: ");
-            int x = Convert.ToInt32(Console.ReadLine());
+            double x = Convert.ToDouble(Console.ReadLine());
+
             Console.WriteLine("Введите значение переменной Y: ");
-            int y = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите значение переменной Z: ");
-            int z = Convert.ToInt32(Console.ReadLine());
-            string res = ds.FindDateOfPreviousDay(x, y, z);
+            double y = Convert.ToDouble(Console.ReadLine());
+                      
+            bool res = ds.CheckDotInShadedArea(x, y);
+
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine($"Дата предыдущего дня: {res}");
+            if (res)
+            {
+                Console.WriteLine("Точка находится в заштрихованной области");
+            }
+            else
+            {
+                Console.WriteLine("Точка не находится в заштрихованной области");
+            }
 
             Console.ReadKey();
         }
-    
     }
 }

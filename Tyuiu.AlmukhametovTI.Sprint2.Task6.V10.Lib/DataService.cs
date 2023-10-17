@@ -18,6 +18,7 @@ namespace Tyuiu.AlmukhametovTI.Sprint2.Task6.V10.Lib
             switch (m)
             {
                 case 1: 
+               
                     previousMonth = 12;
                     previousYear = g - 1;
                     break;
@@ -31,7 +32,7 @@ namespace Tyuiu.AlmukhametovTI.Sprint2.Task6.V10.Lib
                     previousYear = g;
                     break;
                 default:
-                    previousMonth = m - 1;
+                    previousMonth = m ;
                     previousYear = g;
                     break;
             }
